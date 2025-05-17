@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane fx:id="mainContainer" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vetcare360.controllers.MenuController">
+    <top>
+        <HBox id="topMenu" styleClass="menu-bar">
+            <Label id="appTitle" text="VetCare360" styleClass="app-title" />
+            <HBox HBox.hgrow="ALWAYS"/>
+            <Button fx:id="homeButton" styleClass="menu-button">
+                <graphic>
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <ImageView fitHeight="18" fitWidth="18" preserveRatio="true">
+                            <Image url="@../icons/house-door-fill.png" />
+                        </ImageView>
+                        <Label text="Home" />
+                    </HBox>
+                </graphic>
+            </Button>
+            <Button fx:id="findOwnersButton" styleClass="menu-button">
+                <graphic>
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <ImageView fitHeight="18" fitWidth="18" preserveRatio="true">
+                            <Image url="@../icons/search.png" />
+                        </ImageView>
+                        <Label text="Find Owners" />
+                    </HBox>
+                </graphic>
+            </Button>
+            <Button fx:id="veterinariansButton" styleClass="menu-button">
+                <graphic>
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
+                            <Image url="@../icons/list-ul.png" />
+                        </ImageView>
+                        <Label text="Veterinarians" />
+                    </HBox>
+                </graphic>
+            </Button>
+            <Button fx:id="errorButton" styleClass="menu-button">
+                <graphic>
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <ImageView fitHeight="18" fitWidth="18" preserveRatio="true">
+                            <Image url="@../icons/exclamation-triangle.png" />
+                        </ImageView>
+                        <Label text="Error" />
+                    </HBox>
+                </graphic>
+            </Button>
+        </HBox>
+    </top>
+    <center>
+        <!-- The content will be dynamically loaded here -->
+    </center>
+</BorderPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="vetcare360.controllers.OwnerListController"
+            fitToWidth="true"
+            styleClass="scroll-container"
+            stylesheets="@../css/styles.css">
+
+    <content>
+        <VBox spacing="10" styleClass="content-container">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="Owners" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" styleClass="page-title"/>
+
+            <TableView fx:id="ownersTable" VBox.vgrow="ALWAYS" prefHeight="500" style="-fx-font-size: 18px;" styleClass="data-table" tableMenuButtonVisible="false" maxHeight="400">
+
+                <columns>
+                    <TableColumn text="Name" fx:id="nameColumn" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="name"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Address" fx:id="addressColumn" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="address"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="City" fx:id="cityColumn" prefWidth="120">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="city"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Telephone" fx:id="telephoneColumn" prefWidth="130">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="telephone"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Pets" fx:id="petsColumn" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="pets"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                </columnResizePolicy>
+            </TableView>
+        </VBox>
+    </content>
+</ScrollPane>

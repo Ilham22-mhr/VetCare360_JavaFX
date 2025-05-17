@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            styleClass="error-container">
+
+    <center>
+        <VBox spacing="20" alignment="CENTER">
+            <padding>
+                <Insets top="30" bottom="30" left="30" right="30"/>
+            </padding>
+
+            <Text text="Something happened ..." styleClass="error-title" />
+
+            <Text text="An unexpected error has occurred." styleClass="error-subtitle" />
+
+            <Text text="Please try again later or contact support."
+                  styleClass="error-message"
+                  textAlignment="JUSTIFY" />
+        </VBox>
+    </center>
+
+</BorderPane>

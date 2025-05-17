@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" alignment="TOP_LEFT" styleClass="content-container"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="vetcare360.controllers.AddPetController">
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <Label text="Add Pet" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" styleClass="page-title"/>
+
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100" prefWidth="100"/>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="100" prefWidth="300"/>
+        </columnConstraints>
+
+        <Label text="Owner:" style="-fx-font-size: 18px;" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="ownerNameField" editable="false"
+                   style="-fx-font-size: 18px; -fx-pref-height: 50px;"
+                   GridPane.rowIndex="0" GridPane.columnIndex="1"
+                   promptText="Owner's Name (read-only)"/>
+    </GridPane>
+
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100" prefWidth="100"/>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="300" prefWidth="300"/>
+        </columnConstraints>
+
+        <Label text="Name:" style="-fx-font-size: 18px;" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="petNameField"
+                   style="-fx-font-size: 18px; -fx-pref-height: 50px;"
+                   GridPane.rowIndex="0" GridPane.columnIndex="1"
+                   promptText="Enter Pet Name"/>
+
+        <Label text="Birth Date:" style="-fx-font-size: 18px;" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="birthDateField"
+                    style="-fx-font-size: 18px; -fx-pref-height: 50px;"
+                    promptText="Select Birth Date"
+                    maxWidth="Infinity"
+                    GridPane.rowIndex="1" GridPane.columnIndex="1"
+                    GridPane.fillWidth="true"
+                    GridPane.hgrow="ALWAYS"/>
+
+        <Label text="Type:" style="-fx-font-size: 18px;" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="petTypeField"
+                  editable="false"
+                  promptText="Select Pet Type"
+                  style="-fx-font-size: 18px; -fx-pref-height: 50px;"
+                  maxWidth="Infinity"
+                  GridPane.rowIndex="2" GridPane.columnIndex="1"
+                  GridPane.fillWidth="true"
+                  GridPane.hgrow="ALWAYS"/>
+    </GridPane>
+
+    <HBox spacing="10">
+        <Button text="Add Pet" onAction="#addPet" styleClass="action-button"/>
+    </HBox>
+</VBox>
